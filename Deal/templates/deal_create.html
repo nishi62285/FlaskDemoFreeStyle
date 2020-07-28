@@ -1,0 +1,38 @@
+{% extends "basedeal.html" %}
+{% block body %}
+Deal Creation:
+<br><br>
+<form method="POST" action="/deal/deal">
+    {{form.csrf_token()}}
+{{form.DealName.label}} : {{ form.DealName}}<br><br>
+{% if form.DealName.errors %}
+    {% for error in form.DealName.errors  %}
+    <li>{{ error}}</li>
+    {% endfor %}
+{% endif %}
+<br><br>
+{{form.DealDate.label}} : {{ form.DealDate}}<br><br>
+    {% if form.DealDate.errors %}
+        {% for error in form.DealDate.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+<br><br>
+{{form.DealQuantity.label}} : {{ form.DealQuantity}}<br><br>
+    {% if form.DealQuantity.errors %}
+        {% for error in form.DealQuantity.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+<br><br>
+{{form.DealDescription.label}} : {{ form.DealDescription}}<br><br>
+    {% if form.DealDescription.errors %}
+        {% for error in form.DealDescription.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+<br><br>
+{{form.IsLocal.label}} : {{ form.IsLocal }}<br><br>
+    {{form.Submit()}}<br><br>
+</form>
+{% endblock %}
