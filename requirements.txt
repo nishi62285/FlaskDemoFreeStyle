@@ -4,7 +4,7 @@ Flask==1.1.2
 Flask-Cors==3.0.8
 Flask-DebugToolbar==0.11.0
 flask-swagger-ui==3.25.0
-Flask-UID @ file:///C:/Users/dhuri/PycharmProjects/flask_demo/wheels/Flask_UID-1.0-py3-none-any.whl
+Flask-UID @ file:///C:/Flask_UID-1.0-py3-none-any.whl
 Flask-WTF==0.14.3
 itsdangerous==1.1.0
 Jinja2==2.11.2
